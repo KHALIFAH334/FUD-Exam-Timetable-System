@@ -1,0 +1,163 @@
+@import './theme.css';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 16px;
+}
+
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--fud-cream-100);
+
+    color:
+        var(--text-main);
+
+    -webkit-font-smoothing:
+        antialiased;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   LOADING
+   ========================================================== */
+
+.page-loader {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        var(--fud-green-900);
+
+    color:
+        white;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   GENERIC MESSAGE PAGE
+   ========================================================== */
+
+.message-page {
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: center;
+
+    background:
+        var(--fud-cream-100);
+}
+
+
+/* ==========================================================
+   TEMPORARY DASHBOARD
+   ========================================================== */
+
+.temporary-dashboard {
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--fud-cream-100),
+            var(--fud-cream-200)
+        );
+}
+
+
+.temporary-dashboard h1 {
+    color:
+        var(--fud-green-900);
+}
+
+
+.temporary-dashboard button {
+
+    border: none;
+
+    padding: 11px 24px;
+
+    border-radius:
+        var(--radius-sm);
+
+    background:
+        var(--fud-orange-700);
+
+    color:
+        white;
+
+    font-weight: 600;
+}
+
+
+.temporary-dashboard button:hover {
+
+    background:
+        var(--fud-orange-900);
+}

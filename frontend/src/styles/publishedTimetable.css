@@ -1,0 +1,960 @@
+.published-header {
+    min-height: 155px;
+
+    padding: 28px 32px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #a84f08,
+            #bd6415
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+
+.published-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #006333;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.published-header .published-label {
+    color: #eaf7ee;
+}
+
+
+.published-header h2 {
+    margin: 0 0 8px;
+
+    font-size: 27px;
+}
+
+
+.published-header p {
+    max-width: 800px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   ALERTS
+   ========================================================== */
+
+.published-success,
+.published-error {
+    padding: 14px 18px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+}
+
+
+.published-success {
+    background: #e7f8ec;
+
+    border-left:
+        4px solid #168542;
+
+    color: #11652d;
+}
+
+
+.published-error {
+    background: #fae9e7;
+
+    border-left:
+        4px solid #af2a1f;
+
+    color: #8e2118;
+}
+
+
+.published-success span,
+.published-error span {
+    flex: 1;
+}
+
+
+.published-success button,
+.published-error button {
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+   SESSION SELECTOR
+   ========================================================== */
+
+.published-selector-panel {
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.published-selector-panel h3 {
+    margin: 0;
+
+    color: #004d28;
+
+    font-size: 19px;
+}
+
+
+.published-selector-row {
+    margin-top: 18px;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.published-selector-row select {
+    flex: 1;
+
+    height: 44px;
+
+    padding: 0 12px;
+
+    border:
+        1px solid #ccd5cf;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #24372d;
+
+    font-size: 12px;
+
+    outline: none;
+}
+
+
+.published-selector-row select:focus {
+    border-color: #006b36;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 107, 54, 0.10);
+}
+
+
+.published-load-button {
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #006b36;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.published-load-button:hover {
+    background: #005127;
+}
+
+
+.published-load-button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+.published-session-info {
+    margin-top: 13px;
+
+    padding: 12px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    border-radius: 7px;
+
+    background: #fbfcf4;
+
+    border-left:
+        3px solid #ad4e08;
+}
+
+
+.published-session-info span {
+    color: #737d77;
+
+    font-size: 9px;
+}
+
+
+.published-session-info strong {
+    color: #004d28;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   EMPTY
+   ========================================================== */
+
+.published-empty {
+    min-height: 250px;
+
+    padding: 30px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.published-empty-icon {
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+
+.published-empty strong {
+    color: #004d28;
+
+    font-size: 15px;
+}
+
+
+.published-empty span {
+    color: #68736d;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   PUBLISHED HEADER
+   ========================================================== */
+
+.published-info-panel {
+    padding: 22px 25px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    border-left:
+        5px solid #168542;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.published-info-main h3 {
+    margin: 0 0 8px;
+
+    color: #004d28;
+
+    font-size: 19px;
+}
+
+
+.published-info-main .published-label {
+    margin-bottom: 5px;
+}
+
+
+.published-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.published-meta span {
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    background: #f4f5ea;
+
+    color: #66726c;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.published-status-badge {
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    background: #d9f5e2;
+
+    color: #08783b;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   DEPARTMENT
+   ========================================================== */
+
+.published-department-banner {
+    padding: 16px 20px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-radius: 9px;
+
+    background: #fbfcf4;
+
+    border:
+        1px solid #e5eadf;
+}
+
+
+.published-department-banner div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.published-department-banner span {
+    color: #737d77;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.published-department-banner strong {
+    color: #004d28;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   STATISTICS
+   ========================================================== */
+
+.published-stat-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.published-stat-card {
+    padding: 18px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    border-top:
+        4px solid #006b36;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.published-stat-card span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #66726c;
+
+    font-size: 10px;
+}
+
+
+.published-stat-card strong {
+    color: #004d28;
+
+    font-size: 24px;
+}
+
+
+/* ==========================================================
+   SCHEDULE
+   ========================================================== */
+
+.published-schedule-panel {
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.published-section-heading {
+    margin-bottom: 20px;
+}
+
+
+.published-section-heading h3 {
+    margin: 0;
+
+    color: #004d28;
+
+    font-size: 19px;
+}
+
+
+.published-day {
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #e3e9e5;
+
+    border-radius: 9px;
+}
+
+
+.published-day:last-child {
+    margin-bottom: 0;
+}
+
+
+.published-day-header {
+    padding: 11px 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #00572d;
+
+    color: white;
+}
+
+
+.published-day-header span {
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.published-day-header strong {
+    font-size: 12px;
+}
+
+
+.published-exam-list {
+    padding: 10px;
+}
+
+
+.published-exam-card {
+    display: grid;
+
+    grid-template-columns:
+        1.7fr
+        0.9fr
+        0.6fr
+        1.15fr
+        1.15fr;
+
+    gap: 14px;
+
+    padding: 15px;
+
+    margin-bottom: 8px;
+
+    border:
+        1px solid #e4eae6;
+
+    border-radius: 7px;
+
+    background: white;
+}
+
+
+.published-exam-card:last-child {
+    margin-bottom: 0;
+}
+
+
+.published-exam-course {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.published-exam-course span {
+    color: #ad4e08;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.published-exam-course strong {
+    color: #004d28;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+.published-exam-course small {
+    color: #77817b;
+
+    font-size: 9px;
+}
+
+
+.published-exam-time,
+.published-exam-candidates,
+.published-exam-venues,
+.published-exam-invigilators {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.published-exam-time > span,
+.published-exam-candidates > span,
+.published-exam-venues > span,
+.published-exam-invigilators > span {
+    color: #737d77;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.published-exam-time strong,
+.published-exam-candidates strong {
+    color: #004d28;
+
+    font-size: 11px;
+}
+
+
+.published-exam-time small {
+    color: #77817b;
+
+    font-size: 9px;
+}
+
+
+.published-resource-item {
+    padding: 7px 8px;
+
+    border-radius: 5px;
+
+    background: #fbfcf4;
+
+    border-left:
+        2px solid #ad4e08;
+}
+
+
+.published-resource-item strong {
+    display: block;
+
+    color: #24372d;
+
+    font-size: 9px;
+
+    line-height: 1.3;
+}
+
+
+.published-resource-item small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #77817b;
+
+    font-size: 8px;
+}
+
+
+.published-exam-venues > small,
+.published-exam-invigilators > small {
+    color: #8b8f8c;
+
+    font-size: 9px;
+}
+
+
+/* ==========================================================
+   NO EXAMS
+   ========================================================== */
+
+.published-no-exams {
+    min-height: 200px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    text-align: center;
+}
+
+
+.published-no-exams strong {
+    color: #004d28;
+
+    font-size: 14px;
+}
+
+
+.published-no-exams span {
+    color: #68736d;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+    .published-exam-card {
+        grid-template-columns:
+            1.5fr
+            1fr
+            0.7fr;
+    }
+
+
+    .published-exam-venues,
+    .published-exam-invigilators {
+        grid-column: span 1;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .published-stat-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .published-exam-card {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .published-exam-course {
+        grid-column: span 2;
+    }
+
+
+    .published-exam-venues,
+    .published-exam-invigilators {
+        grid-column: span 2;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .published-header {
+        padding: 24px 20px;
+    }
+
+
+    .published-selector-panel,
+    .published-schedule-panel {
+        padding: 18px 14px;
+    }
+
+
+    .published-selector-row {
+        flex-direction: column;
+    }
+
+
+    .published-load-button {
+        height: 42px;
+    }
+
+
+    .published-info-panel {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .published-department-banner {
+        flex-direction: column;
+    }
+
+
+    .published-stat-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .published-exam-card {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .published-exam-course,
+    .published-exam-venues,
+    .published-exam-invigilators {
+        grid-column: auto;
+    }
+
+
+    .published-day-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .published-stat-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .published-meta {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+/* ==========================================================
+   PUBLISHED TIMETABLE DOWNLOAD BUTTONS
+   ========================================================== */
+
+.published-header-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.published-download-actions {
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.published-download-excel,
+.published-download-pdf {
+    padding: 8px 11px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.published-download-excel {
+    background: #2f6f3e;
+}
+
+
+.published-download-pdf {
+    background: #8c3d31;
+}
+
+
+.published-download-excel:hover {
+    background: #245930;
+}
+
+
+.published-download-pdf:hover {
+    background: #703028;
+}
+
+
+.published-download-excel:disabled,
+.published-download-pdf:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 650px) {
+
+    .published-header-actions {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

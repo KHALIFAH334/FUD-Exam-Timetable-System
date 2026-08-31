@@ -1,0 +1,577 @@
+/* ==========================================================
+   FEEDBACK LINKS PAGE
+   ========================================================== */
+
+.feedback-links-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background: #ffffff;
+    padding: 22px 28px;
+    margin-bottom: 18px;
+
+    border-bottom: 3px solid #006b36;
+}
+
+.feedback-links-label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #d86f00;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .4px;
+}
+
+.feedback-links-header h2 {
+    margin: 0;
+
+    color: #003f24;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.feedback-links-header p {
+    margin: 7px 0 0;
+
+    color: #666666;
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   CREATE BUTTON
+   ========================================================== */
+
+.feedback-create-button {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #006b36;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.feedback-create-button:hover {
+    background: #00552b;
+}
+
+
+/* ==========================================================
+   ALERTS
+   ========================================================== */
+
+.feedback-success,
+.feedback-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+    padding: 12px 15px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+}
+
+.feedback-success {
+    background: #eaf7ee;
+    border: 1px solid #afd4ba;
+    color: #176331;
+}
+
+.feedback-error {
+    background: #fff0ed;
+    border: 1px solid #dfaaa0;
+    color: #8c3024;
+}
+
+.feedback-success span,
+.feedback-error span {
+    flex: 1;
+}
+
+.feedback-success button,
+.feedback-error button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+
+/* ==========================================================
+   SUMMARY
+   ========================================================== */
+
+.feedback-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.feedback-summary-card {
+    padding: 16px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce6df;
+    border-left: 4px solid #006b36;
+
+    border-radius: 7px;
+
+    box-shadow: 0 2px 7px rgba(0,0,0,.05);
+}
+
+.feedback-summary-card.active {
+    border-left-color: #2f6f3e;
+}
+
+.feedback-summary-card.disabled {
+    border-left-color: #8c3d31;
+}
+
+.feedback-summary-card span {
+    display: block;
+
+    color: #666666;
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.feedback-summary-card strong {
+    color: #003f24;
+    font-size: 25px;
+}
+
+
+/* ==========================================================
+   PANELS
+   ========================================================== */
+
+.feedback-panel,
+.feedback-create-panel {
+    background: #ffffff;
+
+    border: 1px solid #dbe5de;
+    border-radius: 9px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+
+    overflow: hidden;
+}
+
+.feedback-panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px 20px;
+
+    border-bottom: 1px solid #dfe7e2;
+}
+
+.feedback-panel-heading h3 {
+    margin: 0;
+
+    color: #003f24;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   FORM
+   ========================================================== */
+
+.feedback-create-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+
+    padding: 20px;
+}
+
+.feedback-form-group {
+    flex: 1;
+}
+
+.feedback-form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #444444;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.feedback-form-group select {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    border: 1px solid #cbd8d0;
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #333333;
+    font-size: 12px;
+
+    outline: none;
+}
+
+.feedback-form-group select:focus {
+    border-color: #006b36;
+}
+
+.feedback-submit-button {
+    padding: 9px 15px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #d86f00;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.feedback-submit-button:hover {
+    background: #b95e00;
+}
+
+.feedback-submit-button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   REFRESH
+   ========================================================== */
+
+.feedback-refresh-button {
+    padding: 8px 13px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #006b36;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.feedback-refresh-button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   TABLE
+   ========================================================== */
+
+.feedback-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.feedback-table {
+    width: 100%;
+    min-width: 1000px;
+
+    border-collapse: collapse;
+
+    font-size: 11px;
+}
+
+.feedback-table th {
+    padding: 11px 9px;
+
+    background: #006b36;
+    color: #ffffff;
+
+    text-align: left;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.feedback-table td {
+    padding: 10px 9px;
+
+    border-bottom: 1px solid #e3e9e5;
+
+    color: #333333;
+
+    vertical-align: middle;
+}
+
+.feedback-table tbody tr:hover {
+    background: #f6faf7;
+}
+
+.feedback-table td strong {
+    display: block;
+    color: #17452f;
+}
+
+.feedback-table td small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #777777;
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   VERSION
+   ========================================================== */
+
+.feedback-version-badge {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    border-radius: 12px;
+
+    background: #edf5ef;
+    border: 1px solid #c9dfcf;
+
+    color: #006b36;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   STATUS
+   ========================================================== */
+
+.feedback-status {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 12px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.feedback-status.active {
+    background: #e3f5e8;
+    color: #176b34;
+}
+
+.feedback-status.disabled {
+    background: #eeeeee;
+    color: #666666;
+}
+
+
+/* ==========================================================
+   LINK CELL
+   ========================================================== */
+
+.feedback-link-cell {
+    display: flex;
+    gap: 5px;
+
+    min-width: 290px;
+}
+
+.feedback-link-cell input {
+    width: 230px;
+
+    padding: 6px 7px;
+
+    border: 1px solid #d2dcd5;
+    border-radius: 4px;
+
+    background: #f8faf9;
+
+    color: #555555;
+
+    font-size: 9px;
+}
+
+.feedback-copy-button {
+    padding: 6px 8px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #d86f00;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.feedback-copy-button:hover {
+    background: #b95e00;
+}
+
+
+/* ==========================================================
+   ACTIONS
+   ========================================================== */
+
+.feedback-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.feedback-open-button,
+.feedback-disable-button,
+.feedback-enable-button {
+    padding: 6px 8px;
+
+    border: none;
+    border-radius: 4px;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.feedback-open-button {
+    background: #006b36;
+}
+
+.feedback-open-button:hover {
+    background: #00552b;
+}
+
+.feedback-disable-button {
+    background: #8c3d31;
+}
+
+.feedback-disable-button:hover {
+    background: #703028;
+}
+
+.feedback-enable-button {
+    background: #2f6f3e;
+}
+
+.feedback-enable-button:hover {
+    background: #245930;
+}
+
+.feedback-actions button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   EMPTY / LOADING
+   ========================================================== */
+
+.feedback-loading,
+.feedback-empty {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    color: #666666;
+}
+
+.feedback-empty strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #003f24;
+    font-size: 14px;
+}
+
+.feedback-empty span {
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 800px) {
+
+    .feedback-links-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .feedback-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-create-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
+/* ==========================================================
+   DELETE BUTTON
+   ========================================================== */
+
+.feedback-delete-button {
+    padding: 6px 8px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #7a2020;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.feedback-delete-button:hover {
+    background: #5f1818;
+}
+
+.feedback-delete-button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}

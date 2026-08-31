@@ -1,0 +1,816 @@
+.blackout-header {
+    min-height: 155px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #a84f08,
+            #bd6415
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+
+.blackout-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #006333;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+.blackout-header .blackout-label {
+    color: #eaf7ee;
+}
+
+
+.blackout-header h2 {
+    margin-bottom: 8px;
+
+    font-size: 27px;
+}
+
+
+.blackout-header p {
+    max-width: 760px;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+.blackout-create-button {
+    min-width: 175px;
+
+    padding: 11px 16px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #006b36;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.blackout-create-button:hover {
+    background: #005127;
+}
+
+
+.blackout-success,
+.blackout-error {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+}
+
+
+.blackout-success {
+    background: #e7f8ec;
+
+    border-left:
+        4px solid #168542;
+
+    color: #11652d;
+}
+
+
+.blackout-error {
+    background: #fae9e7;
+
+    border-left:
+        4px solid #af2a1f;
+
+    color: #8e2118;
+}
+
+
+.blackout-success span,
+.blackout-error span {
+    flex: 1;
+}
+
+
+.blackout-success button,
+.blackout-error button {
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.blackout-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 17px;
+
+    margin-bottom: 22px;
+}
+
+
+.blackout-summary-card {
+    padding: 20px 22px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    border-top:
+        4px solid #006b36;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.blackout-summary-card span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #66726c;
+
+    font-size: 11px;
+}
+
+
+.blackout-summary-card strong {
+    color: #004d28;
+
+    font-size: 25px;
+}
+
+
+.blackout-panel {
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.blackout-panel-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+
+.blackout-panel-heading h3 {
+    color: #004d28;
+
+    font-size: 19px;
+}
+
+
+.blackout-refresh-button {
+    padding: 9px 15px;
+
+    border:
+        1px solid #006b36;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #006b36;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.blackout-refresh-button:hover {
+    background: #006b36;
+
+    color: white;
+}
+
+
+.blackout-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.blackout-table {
+    width: 100%;
+
+    min-width: 1100px;
+
+    border-collapse: collapse;
+}
+
+
+.blackout-table th {
+    padding: 13px 12px;
+
+    background: #00572d;
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 10px;
+}
+
+
+.blackout-table th:first-child {
+    border-radius: 7px 0 0 0;
+}
+
+
+.blackout-table th:last-child {
+    border-radius: 0 7px 0 0;
+}
+
+
+.blackout-table td {
+    padding: 13px 12px;
+
+    border-bottom:
+        1px solid #e6ebe8;
+
+    color: #24372d;
+
+    font-size: 11px;
+
+    vertical-align: middle;
+}
+
+
+.blackout-table tbody tr:hover {
+    background: #fbfcf4;
+}
+
+
+.blackout-table td strong {
+    display: block;
+
+    color: #004d28;
+}
+
+
+.blackout-table td small {
+    color: #748078;
+
+    font-size: 9px;
+}
+
+
+.blackout-date {
+    display: inline-block;
+
+    padding: 6px 9px;
+
+    border-radius: 6px;
+
+    background: #f8ead8;
+
+    color: #92500b;
+
+    font-weight: 800;
+}
+
+
+.exam-period {
+    white-space: nowrap;
+
+    color: #5f6b64;
+}
+
+
+.blackout-reason {
+    display: block;
+
+    max-width: 270px;
+
+    line-height: 1.45;
+}
+
+
+.blackout-actions {
+    display: flex;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+
+.blackout-view-button,
+.blackout-edit-button,
+.blackout-delete-button {
+    padding: 7px 9px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.blackout-view-button {
+    background: #ad4e08;
+}
+
+
+.blackout-edit-button {
+    background: #006b36;
+}
+
+
+.blackout-delete-button {
+    background: #ad2d22;
+}
+
+
+.blackout-view-button:hover {
+    background: #903f05;
+}
+
+
+.blackout-edit-button:hover {
+    background: #005127;
+}
+
+
+.blackout-delete-button:hover {
+    background: #8b2018;
+}
+
+
+.blackout-loading,
+.blackout-empty {
+    min-height: 220px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    text-align: center;
+
+    color: #68736d;
+}
+
+
+.blackout-empty strong {
+    color: #004d28;
+}
+
+
+.blackout-empty span {
+    font-size: 12px;
+}
+
+
+.blackout-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(15, 25, 18, 0.58);
+
+    backdrop-filter: blur(2px);
+}
+
+
+.blackout-modal {
+    width: 100%;
+
+    max-width: 650px;
+
+    max-height: 92vh;
+
+    overflow-y: auto;
+
+    padding: 27px;
+
+    border-radius: 14px;
+
+    background: white;
+
+    border-top:
+        6px solid #ad4e08;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.28);
+}
+
+
+.blackout-modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding-bottom: 17px;
+
+    margin-bottom: 22px;
+
+    border-bottom:
+        1px solid #e7ebe8;
+}
+
+
+.blackout-modal-header h3 {
+    color: #004d28;
+
+    font-size: 21px;
+}
+
+
+.blackout-modal-close {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f4f2d4;
+
+    color: #9a4908;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+.blackout-modal-close:hover {
+    background: #ad4e08;
+
+    color: white;
+}
+
+
+.blackout-modal-error {
+    padding: 11px 13px;
+
+    margin-bottom: 18px;
+
+    border-radius: 6px;
+
+    background: #fae9e7;
+
+    border-left:
+        4px solid #af2a1f;
+
+    color: #8e2118;
+
+    font-size: 11px;
+}
+
+
+.blackout-form-group {
+    margin-bottom: 18px;
+}
+
+
+.blackout-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #24372d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.blackout-form-group input,
+.blackout-form-group select,
+.blackout-form-group textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border:
+        1px solid #ccd5cf;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #24372d;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    box-sizing: border-box;
+}
+
+
+.blackout-form-group input,
+.blackout-form-group select {
+    height: 44px;
+}
+
+
+.blackout-form-group textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+
+.blackout-form-group input:focus,
+.blackout-form-group select:focus,
+.blackout-form-group textarea:focus {
+    border-color: #006b36;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 107, 54, 0.10);
+}
+
+
+.blackout-info {
+    padding: 13px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    border-radius: 7px;
+
+    background: #fbfcf4;
+
+    border-left:
+        3px solid #ad4e08;
+}
+
+
+.blackout-info strong {
+    color: #004d28;
+
+    font-size: 11px;
+}
+
+
+.blackout-info span {
+    color: #68736d;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+}
+
+
+.blackout-modal-actions {
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    border-top:
+        1px solid #e7ebe8;
+}
+
+
+.blackout-cancel-button,
+.blackout-save-button {
+    min-width: 125px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.blackout-cancel-button {
+    background: #eeeeee;
+
+    color: #27352e;
+}
+
+
+.blackout-save-button {
+    background: #006b36;
+
+    color: white;
+}
+
+
+.blackout-save-button:hover {
+    background: #005127;
+}
+
+
+.blackout-detail-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 14px;
+}
+
+
+.blackout-detail-grid > div {
+    padding: 15px;
+
+    border-radius: 7px;
+
+    background: #fbfcf4;
+
+    border-left:
+        3px solid #ad4e08;
+}
+
+
+.blackout-detail-wide {
+    grid-column:
+        1 / -1;
+}
+
+
+.blackout-detail-grid span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #717c76;
+
+    font-size: 10px;
+}
+
+
+.blackout-detail-grid strong {
+    color: #24372d;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+@media (max-width: 950px) {
+
+    .blackout-summary-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .blackout-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .blackout-detail-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .blackout-detail-wide {
+        grid-column: auto;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .blackout-summary-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .blackout-panel {
+        padding: 17px 13px;
+    }
+
+
+    .blackout-modal {
+        padding: 20px 16px;
+    }
+
+
+    .blackout-modal-actions {
+        flex-direction:
+            column-reverse;
+    }
+
+
+    .blackout-cancel-button,
+    .blackout-save-button {
+        width: 100%;
+    }
+
+}
