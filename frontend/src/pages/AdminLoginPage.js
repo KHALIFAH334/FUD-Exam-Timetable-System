@@ -210,7 +210,7 @@ const AdminLoginPage = () => {
                         </span>
 
                         <h2>
-                            Super Admin Sign In
+                            Faculty Dean Log In
                         </h2>
 
                         <p>
@@ -228,8 +228,7 @@ const AdminLoginPage = () => {
                             Administrator Access
                         </strong>
 
-                        Only authorized Super Administrators
-                        can access this portal.
+                        Only Faculty dean can access this portal.
 
                     </div>
 

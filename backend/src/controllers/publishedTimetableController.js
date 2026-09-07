@@ -1,12 +1,10 @@
 const {
     getDepartmentPublishedTimetable
-} = require(
-    '../services/publishedTimetableService'
-);
+} = require('../services/publishedTimetableService');
 
 
 // ==========================================================
-// GET COORDINATOR'S PUBLISHED TIMETABLE
+// GET PUBLISHED TIMETABLE FOR DEPARTMENT
 // ==========================================================
 const getDepartmentTimetable = async (
     req,
@@ -15,11 +13,19 @@ const getDepartmentTimetable = async (
 
     try {
 
+        // --------------------------------------------------
+        // AUTHENTICATED USER CONTEXT
+        // --------------------------------------------------
+
+        const workspaceId =
+            Number(
+                req.user.workspace_id
+            );
+
         const facultyId =
             Number(
                 req.user.faculty_id
             );
-
 
         const departmentId =
             Number(
@@ -27,71 +33,113 @@ const getDepartmentTimetable = async (
             );
 
 
-        const {
-            session_id
-        } = req.query;
-
-
         // --------------------------------------------------
-        // SESSION REQUIRED
+        // VALIDATE WORKSPACE
         // --------------------------------------------------
 
-        if (!session_id) {
+        if (
+            !Number.isInteger(workspaceId) ||
+            workspaceId <= 0
+        ) {
 
-            return res.status(400).json({
-
+            return res.status(403).json({
                 success: false,
-
                 message:
-                    'session_id is required'
+                    'Your account is not assigned to a valid workspace.'
             });
+
         }
 
 
         // --------------------------------------------------
-        // COORDINATOR MUST HAVE DEPARTMENT
+        // VALIDATE FACULTY
         // --------------------------------------------------
 
         if (
-            !departmentId ||
+            !Number.isInteger(facultyId) ||
+            facultyId <= 0
+        ) {
+
+            return res.status(403).json({
+                success: false,
+                message:
+                    'Your account is not assigned to a valid faculty.'
+            });
+
+        }
+
+
+        // --------------------------------------------------
+        // VALIDATE DEPARTMENT
+        // --------------------------------------------------
+
+        if (
+            !Number.isInteger(departmentId) ||
             departmentId <= 0
         ) {
 
             return res.status(403).json({
-
                 success: false,
-
                 message:
-                    'Department access is required'
+                    'Your account is not assigned to a department.'
             });
+
         }
 
 
-        // IMPORTANT:
-        //
-        // Department ID comes ONLY from req.user.
-        // We intentionally ignore any department_id
-        // supplied in query/body.
+        // --------------------------------------------------
+        // GET SESSION ID
+        // --------------------------------------------------
+
+        const sessionId =
+            Number(
+                req.query.session_id
+            );
+
+
+        if (
+            !Number.isInteger(sessionId) ||
+            sessionId <= 0
+        ) {
+
+            return res.status(400).json({
+                success: false,
+                message:
+                    'session_id is required'
+            });
+
+        }
+
+
+        // --------------------------------------------------
+        // GET PUBLISHED TIMETABLE
+        // --------------------------------------------------
+
         const result =
             await getDepartmentPublishedTimetable(
-                session_id,
+                sessionId,
+                workspaceId,
                 facultyId,
                 departmentId
             );
 
+
+        // --------------------------------------------------
+        // RESPONSE
+        // --------------------------------------------------
 
         return res.status(200).json({
 
             success: true,
 
             ...result
-        });
 
+        });
 
     } catch (error) {
 
         console.error(
-            'Published department timetable error:',
+            'Get department timetable error:',
             error.message
         );
 
@@ -107,7 +155,9 @@ const getDepartmentTimetable = async (
                 message:
                     error.message ||
                     'Unable to retrieve published timetable'
+
             });
+
     }
 };
 

@@ -45,12 +45,12 @@ const AdminLayout = ({
         },
 
         {
-            label: 'Exam Officers',
+            label: 'Faculty Exam Officers',
             path: '/admin#exam-officers'
         },
 
         {
-            label: 'Department Coordinators',
+            label: 'Department Exam Officer',
             path: '/admin#coordinators'
         },
 
