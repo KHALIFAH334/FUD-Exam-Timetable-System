@@ -1721,45 +1721,6 @@ const deleteCourse = async (
 
 
         // --------------------------------------------------
-        // CHECK STUDENT REGISTRATIONS
-        // --------------------------------------------------
-
-        const [registrationRows] =
-            await db.query(
-                `SELECT
-                    COUNT(*) AS total
-
-                 FROM student_course_registrations
-
-                 WHERE course_id = ?`,
-                [
-                    courseId
-                ]
-            );
-
-
-        const registrationCount =
-            Number(
-                registrationRows[0].total
-            );
-
-
-        if (
-            registrationCount > 0
-        ) {
-
-            return res.status(409).json({
-
-                success: false,
-
-                message:
-                    `Cannot delete ${course.course_code} because ${registrationCount} student registration(s) are linked to it.`
-                
-            });
-        }
-
-
-        // --------------------------------------------------
         // CHECK TIMETABLE USAGE
         // --------------------------------------------------
 

@@ -32,8 +32,6 @@ import DepartmentsPage
 import CoursesPage
     from './pages/CoursesPage';
 
-import RegistrationsPage
-    from './pages/RegistrationsPage';
 
 import VenuesPage
     from './pages/VenuesPage';
@@ -254,18 +252,6 @@ function App() {
                                     />
 
 
-                                    <Route
-                                        path="/exam-officer/registrations"
-                                        element={
-                                            <ProtectedRoute
-                                                allowedRoles={[
-                                                    'exam_officer'
-                                                ]}
-                                            >
-                                                <RegistrationsPage />
-                                            </ProtectedRoute>
-                                        }
-                                    />
 
 
                                     <Route

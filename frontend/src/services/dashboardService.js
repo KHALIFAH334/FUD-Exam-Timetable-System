@@ -14,14 +14,11 @@ export const getExamOfficerDashboardData = async () => {
         // ==================================================
 
         const [
-            studentsResponse,
             coursesResponse,
             venuesResponse,
             invigilatorsResponse,
             sessionsResponse
         ] = await Promise.all([
-
-            api.get('/students'),
 
             api.get('/courses'),
 
@@ -37,10 +34,6 @@ export const getExamOfficerDashboardData = async () => {
         // ==================================================
         // NORMALIZE ARRAYS
         // ==================================================
-
-        const students =
-            studentsResponse.data?.students ||
-            [];
 
         const courses =
             coursesResponse.data?.courses ||
@@ -259,13 +252,6 @@ export const getExamOfficerDashboardData = async () => {
         return {
 
             counts: {
-
-                students:
-                    studentsResponse
-                        .data
-                        ?.count ??
-                    students.length,
-
 
                 courses:
                     coursesResponse

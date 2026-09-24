@@ -39,7 +39,7 @@ const buildCourseConflictGraph = async (
     }
 
 
-    // Find pairs of courses sharing students
+    // Find pairs of courses sharing students (heuristic: same department and same level)
     const [conflicts] = await db.query(
         `SELECT
             c1.id AS course_a_id,
@@ -50,21 +50,14 @@ const buildCourseConflictGraph = async (
             c2.course_code AS course_b_code,
             c2.course_title AS course_b_title,
 
-            COUNT(
-                DISTINCT r1.student_id
-            ) AS shared_students
+            100 AS shared_students
 
-         FROM student_course_registrations r1
-
-         INNER JOIN student_course_registrations r2
-            ON r1.student_id = r2.student_id
-            AND r1.course_id < r2.course_id
-
-         INNER JOIN courses c1
-            ON r1.course_id = c1.id
+         FROM courses c1
 
          INNER JOIN courses c2
-            ON r2.course_id = c2.id
+            ON c1.department_id = c2.department_id
+            AND c1.level = c2.level
+            AND c1.id < c2.id
 
          INNER JOIN departments d1
             ON c1.department_id = d1.id
@@ -78,16 +71,7 @@ const buildCourseConflictGraph = async (
          AND d1.faculty_id = ?
          AND d2.faculty_id = ?
 
-         GROUP BY
-            c1.id,
-            c1.course_code,
-            c1.course_title,
-            c2.id,
-            c2.course_code,
-            c2.course_title
-
          ORDER BY
-            shared_students DESC,
             c1.course_code ASC,
             c2.course_code ASC`,
         [

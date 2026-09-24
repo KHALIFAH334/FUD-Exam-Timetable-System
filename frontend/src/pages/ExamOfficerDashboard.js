@@ -41,8 +41,6 @@ const ExamOfficerDashboard = () => {
 
             counts: {
 
-                students: 0,
-
                 courses: 0,
 
                 venues: 0,
@@ -288,49 +286,6 @@ const ExamOfficerDashboard = () => {
                 ================================================== */}
 
             <section className="statistics-grid">
-
-                {/* STUDENTS */}
-
-                <button
-                    type="button"
-                    className="stat-card dashboard-click-card"
-                    onClick={() =>
-                        goTo(
-                            '/exam-officer/students'
-                        )
-                    }
-                >
-
-                    <div className="stat-card-top">
-
-                        <span className="stat-title">
-                            Students
-                        </span>
-
-                        <span className="stat-icon">
-                            ST
-                        </span>
-
-                    </div>
-
-
-                    <strong className="stat-number">
-
-                        {
-                            loading
-                                ? '...'
-                                : counts.students
-                        }
-
-                    </strong>
-
-
-                    <span className="stat-description">
-                        Registered students
-                    </span>
-
-                </button>
-
 
                 {/* COURSES */}
 
@@ -785,39 +740,7 @@ const ExamOfficerDashboard = () => {
                     </button>
 
 
-                    {/* ==================================================
-                        STUDENTS
-                        ================================================== */}
 
-                    <button
-                        className="quick-action"
-                        type="button"
-                        onClick={() =>
-                            goTo(
-                                '/exam-officer/students'
-                            )
-                        }
-                    >
-
-                        <span className="quick-action-code">
-                            ST
-                        </span>
-
-
-                        <div>
-
-                            <strong>
-                                Students
-                            </strong>
-
-
-                            <span>
-                                Manage student records
-                            </span>
-
-                        </div>
-
-                    </button>
 
 
                     {/* ==================================================
